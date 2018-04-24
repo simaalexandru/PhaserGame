@@ -10,4 +10,5 @@ game.state.add("menu1", menu1),
 game.state.add("level1", level1),
 game.state.add("menu2", menu2),
 game.state.add("level2", level2),
+game.state.add("menu3", menu3),
 game.state.start("boot")

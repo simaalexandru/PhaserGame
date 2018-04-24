@@ -9,23 +9,69 @@
    <script src="js/menu1.js"></script>
    <script src="js/level1.js"></script>
    <script src="js/menu2.js"></script>
-    <script src="js/level2.js"></script>
+   <script src="js/level2.js"></script>
+   <script src="js/menu3.js"></script>
    <script src="js/game.js"></script>
 
    <style>
-   body{
-     background-color: #333;
-   }
+  html, body, section, div {
+  height: 100%;
+}
 
-   #game{
-     margin-left: 18vw;
-     margin-top: 5vw;
-   }
+body { 
+  color: #fff;
+  font-family: sans-serif;
+  font-size: 1.25rem;
+  line-height: 150%;
+  text-align: center;
+  text-shadow: 0 2px 2px #b6701e;
+}
+
+h2 {
+  font-size: 1.75rem;
+  margin: 0 0 0.75rem 0;
+}
+
+// Pattern styles
+.container {
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+
+div {
+  display: table-cell;
+ 
+  vertical-align: middle;
+  width: 50%;
+  padding: 1rem;
+}
+
+.left-half {
+  background: #ff9e2c;
+  text-align:left;
+}
+
+.right-half {
+  background: #b6701e;
+}
 
  </style>
 
  </head>
   <body>
+   <section class="container">
+  <div class="left-half">
+    <div id="rules">
+         <h2>Move the catcher by using the arrow keys.</h2>
+         <h2>Catch the feline.</h2>
+         <h2>Level 2 : 10 points (0-10) in 30 seconds.</h2>
+         <h2>Level 2 : 10 points (10-20) in 20 seconds.</h2>
+     </div>
+  </div>
+  <div class="right-half">
      <div id="game"></div>
+  </div>
+</section>
   </body>
    </html>

@@ -23,7 +23,7 @@ var menu1 = {
         text2.setTextBounds(0, 190, 800, 100);
 
        //instructions
-        text3 = game.add.text(0, 0, "Move the catcher with the arrow keys and catch 10 cats in 30 seconds.", style2);
+        text3 = game.add.text(0, 0, "Catch 10 cats in 30 seconds.", style2);
         text3.setTextBounds(0, 230, 800, 100);
       },
 

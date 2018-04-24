@@ -53,12 +53,11 @@ var level1 = {
      //counting down 1 sec
      text.setText('Time :' + counter);
 
-    if (counter < 29) {
+    if (counter < 0) {
       winText.setText('You lost !');
       cat.alpha = 0.0;
       catcher.alpha = 0.0;
       text.setText('Game over');
-
   } else if (counter > 0 && score == 10) {
      winText.setText('You won !');
       cat.alpha = 0.0;

@@ -1,6 +1,6 @@
 var level2 = {
     create: function() {
-	   game.add.image(0, 0, 'bg2');
+    game.add.image(0, 0, 'bg2');
 
      hitSound = game.add.audio('sound4');
      backgroundSound2 = game.add.audio('sound3');
@@ -25,9 +25,9 @@ var level2 = {
        fill: "#FFF"
      });
      text.anchor.setTo(0.5, 0.5);
-   //updateCounter - callback function
+     //updateCounter - callback function
      //had to use "this"
-     game.time.events.loop(Phaser.Timer.SECOND, this.Counter, this);
+     var timerLoop =  game.time.events.loop(Phaser.Timer.SECOND, this.Counter, this);
 
      // invoke game controls
      cursors = game.input.keyboard.createCursorKeys();
@@ -55,22 +55,27 @@ var level2 = {
        counter--;
        text.setText('Time : ' + counter);
 
-      if (counter < 0 && score >= 0) {
+      if (counter < 0) {
          winText.setText('You lost !');
          cat.alpha = 0.0;
          catcher.alpha = 0.0;
          text.destroy();
          scoreTxt.destroy();
-     } else if (counter > 0 && score == 20) {
-        winText.setText('You won !');
+     } else if (counter > 0 && score == 20) {;
         winSound.play();
         //hide the sprites
         catcher.alpha = 0.0;
         blackpanther.alpha = 0.0;
         backgroundSound2.stop();
-        //remove counter
-        scoreTxt.destroy();
+        winText.setText('You won !');
+       
+        //adding menu3, state that is re-starting the game
+        setTimeout(function()
+        { game.state.start("menu3");
+        }, 1000);
       }
+      
+       
     },
 
 
